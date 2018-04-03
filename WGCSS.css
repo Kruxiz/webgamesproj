@@ -1,0 +1,102 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial;
+	padding: 20px;
+	background: #f1f1f1;
+}
+
+/* Header Title */
+.header {
+	padding: 30px;
+	font-size: 40px;
+	text-align: center;
+	background: white;
+}
+
+/* Background Colour for Top Nav Bar */
+.topnav {
+	background-color: #0066ff;
+	overflow: hidden;
+}
+
+/* Nav Bar Link Style */
+.topnav a {
+	float:left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+	border: 1px solid #bbb;
+}
+
+/* Hover over Nav Bar */
+.topnav a:hover {
+  background-color: #000000;
+  color: white;
+}
+/*Change the colour of the active page in Nav Bar*/
+.topnav a.active {
+	background-color: #ffffff;
+	color: black;
+}
+
+.topnav a:last-child {
+	border-right: none;
+}
+
+.left {
+	float: left;
+	width: 25%;
+	padding: 10px;
+}
+
+.right {
+	float: left;
+	width: 75%;
+	padding: 10px;
+}
+
+/* Add a card effect for articles */
+.card {
+     background-color: white;
+     padding: 20px;
+     margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+	float: right;
+	width: 25%;
+    padding: 20px;
+    text-align: right;
+    background: #ddd;
+    margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media (max-width: 800px) {
+    .left, .right {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width:100%;
+    }
+}
+
