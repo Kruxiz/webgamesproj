@@ -71,6 +71,15 @@ li a:hover:not(.active) {
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+gameDiv {
+	padding-top: 150px;
+}
+>>>>>>> cb41f1e95348776a67e2f15a716b6e632571c3f4
+>>>>>>> 38e1387e567ec7d28f2c092b7731028ed82a920c
 
 /* Clear floats after the columns */
 .row:after {
