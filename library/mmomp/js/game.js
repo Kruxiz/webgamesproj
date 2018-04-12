@@ -5,9 +5,9 @@ Game.init = function(){
 };
 
 Game.preload = function() {
-    game.load.tilemap('map', 'assets/map/created_map.json', null, Phaser.Tilemap.TILED_JSON);
-    game.load.spritesheet('tileset', 'assets/map/tilesheet.png',32,32);
-    game.load.image('sprite','assets/sprites/sprite.png');
+    game.load.tilemap('map', 'library/mmomp/assets/map/created_map.json', null, Phaser.Tilemap.TILED_JSON);
+    game.load.spritesheet('tileset', 'library/mmomp/assets/map/tilesheet.png',32,32);
+    game.load.image('sprite','library/mmomp/assets/sprites/sprite.png');
 };
 
 Game.create = function(){
