@@ -4,7 +4,7 @@
 
 body {
 	font-family: Arial;
-	padding: 20px;
+	padding-top: 50px;
 	background: #f1f1f1;
 }
 
@@ -15,37 +15,34 @@ body {
 	text-align: center;
 	background: white;
 }
-
-/* Background Colour for Top Nav Bar */
-.topnav {
-	background-color: #0066ff;
-	overflow: hidden;
+/*Top Nav Horizonal Bar*/
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
+    overflow: hidden;
+    background-color: #333;
 }
 
-/* Nav Bar Link Style */
-.topnav a {
-	float:left;
-	color: #f2f2f2;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-	font-size: 17px;
-	border: 1px solid #bbb;
+li {
+	float: left;
 }
 
-/* Hover over Nav Bar */
-.topnav a:hover {
-  background-color: #000000;
-  color: white;
-}
-/*Change the colour of the active page in Nav Bar*/
-.topnav a.active {
-	background-color: #ffffff;
-	color: black;
+li a {
+	display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
-.topnav a:last-child {
-	border-right: none;
+li a:hover:not(.active) {
+	background-color: #111;
+
+}
+
+.active {
+    background-color: #4CAF50;
 }
 
 .left {
@@ -67,11 +64,48 @@ body {
      margin-top: 20px;
 }
 
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
 /* Clear floats after the columns */
 .row:after {
     content: "";
     display: table;
     clear: both;
+}
+
+.accordion {
+	background-color: #eee;
+	color: #444;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+	transition: 0.4s;
+}
+
+.accordianactive, .accordion:hover {
+	background-color: #ccc;
+}
+
+.accordion:after {
+	content: '\002B';
+	color: #777;
+	font-weight: bold;
+	float: right;
+	margin-left: 5px;
+}
+
+.accordianactive:after {
+	content: "\2212";
 }
 
 /* Footer */
