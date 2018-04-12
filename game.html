@@ -2,28 +2,36 @@
 <html lang="en-GB">
 <head>
 	<meta charset="UTF-8">
-	<title>Game</title>
+	<title>Tanks Singleplayer</title>
 	<link rel="stylesheet" type="text/css" href="WGCSS.css">
-	<script type="text/javascript" src="library/breakoutmp/js/phaser.min.js"></script>
-	<script type="text/javascript" src="library/breakoutmp/js/gameFile.js"></script>
-	<script type="text/javascript" src="library/breakoutmp/js/game.js"></script>
-	<script></script>
+	<script type="text/javascript" src="library/tanksdatabase/js/phaser.js"></script>
+		<script type="text/javascript" src="library/tanksdatabase/js/gameFunc.js"></script>
+		<script type="text/javascript" src="library/tanksdatabase/js/mainMenu.js"></script>
+		<script type="text/javascript" src="library/tanksdatabase/js/victory.js"></script>
+		
+		<script>
+			var game = new Phaser.Game(800, 600, Phaser.AUTO, "gameDiv");
+			game.state.add("gameFile", gameFunc);
+			game.state.add("victoryScreen", victory);
+			game.state.add("mainMenu", main);
+			game.state.start("mainMenu");
+		</script>
 </head>
 
 <body>
 
 <div class="header">
-	<h1>Interstellar Breakout</h1>
+	<h1>Web Games Project</h1>
 </div>
 
-<div class="topnav">
-	<a href="Index.html">Home</a>
-	<a href="GDD.html">Game Design Document</a>
-	<a class="active" href="Game.html">Interstellar Breakout</a>
-	<a href="About.html">MMOMP</a>
-</div>
+<ul>
+	<li><a href="Index.html">Home</a></li>
+	<li><a href="GDD.html">Game Design Document</a></li>
+	<li><a class="active" href="game.html">Tanks Singleplayer</a></li>
+	<li><a href="About.html">Tanks Multiplayer</a></li>
+</ul>
 
-<div id="gameDiv"></div>
+<div class="gameDiv"></div>
 
 </body>
 </html>
