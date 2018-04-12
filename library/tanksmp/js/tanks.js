@@ -330,9 +330,15 @@ function preload () {
 
     game.load.atlas('tank', 'library/tanksmp/assets/tanks.png', 'library/tanksmp/assets/tanks.json');
     game.load.atlas('enemy', 'library/tanksmp/assets/enemy-tanks.png', 'library/tanksmp/assets/tanks.json');
+<<<<<<< HEAD
     game.load.image('logo', 'library/tanksmp/assets/logo.png');
     game.load.image('bullet', 'library/tanksmp/assets/bullet.png');
     game.load.image('earth', 'library/tanksmp/assets/scorched_earth.png');
+=======
+    game.load.image('logo', 'library/tanksmp//logo.png');
+    game.load.image('bullet', 'library/tanksmp/assets/bullet.png');
+    game.load.image('earth', 'library/tanksmp/ssets/scorched_earth.png');
+>>>>>>> cb41f1e95348776a67e2f15a716b6e632571c3f4
     game.load.spritesheet('kaboom', 'library/tanksmp/assets/explosion.png', 64, 64, 23);
     
 }
