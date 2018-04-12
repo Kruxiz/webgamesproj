@@ -9,15 +9,16 @@
 <body>
 
 <div class="header">
-	<h1>Interstellar Breakout</h1>
+	<h1>Web Games Project</h1>
 </div>
 
-<div class="topnav">
-	<a class="active" href="Index.html">Home</a>
-	<a href="GDD.html">Game Design Document</a>
-	<a href="Game.html">Interstellar Breakout</a>
-	<a href="About.html">MMOMP</a>
-</div>
+<ul>
+	<li><a class="active" href="Index.html">Home</a></li>
+	<li><a href="GDD.html">Game Design Document</a></li>
+	<li><a href="game.html">Tanks Singleplayer</a></li>
+	<li><a href="About.html">Tanks Multiplayer</a></li>
+</ul>
+
 
 <div class="row">
 	<div class="left">
@@ -35,12 +36,16 @@
 	<div class="right">
 	  <div class="card">
 		<h2>Game Synopsis</h2>
-		<p>The game is a 2 player arcade style game. 
-		The player will feel a retro, competition based vibe as if they were in an old school arcade. 
-		They compete to not only survive but to destroy the other player by the end of the game. 
-		The game is set in an intergalactic space tournament where there can be only one winner. 
-		The players are spaceships, fighting for survival by destroying the rival planets in their way. 
-		Once there are only two survivors, they will battle head to head until there is only one winner of the galactic space battle.</p>
+		<p>The game is a top down shooter involving a player controlled tank battling against 20 AI enemy tanks in a bid to be the last tank standing. The game also features a seperate multiplayer environment
+		that allows multiple players to battle it out to see who will be victorious! </p>
+		<button class="accordion">Multiplayer Video</button>
+			<div class="panel">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/w1Do4vHBXeM" allowfullscreen></iframe>
+		</div>
+		<button class="accordion">Singleplayer Video</button>
+			<div class="panel">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/6OUBhbMmu10" allowfullscreen></iframe>
+		</div>
 	  </div>
 	</div>
 </div>
@@ -51,5 +56,20 @@
 </div>
 
 </body>
+	<script>
+		var acc = document.getElementsByClassName("accordion");
+		var i;
 
+		for (i = 0; i < acc.length; i++) {
+		  acc[i].addEventListener("click", function() {
+			this.classList.toggle("accordianactive");
+			var panel = this.nextElementSibling;
+			if (panel.style.maxHeight){
+			  panel.style.maxHeight = null;
+			} else {
+			  panel.style.maxHeight = panel.scrollHeight + "px";
+			} 
+		  });
+		}
+	</script>
 </html>

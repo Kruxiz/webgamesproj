@@ -1,30 +1,45 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta charset="UTF-8">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 	<title>MMO Submission</title>
 	<link rel="stylesheet" type="text/css" href="WGCSS.css">
-    <script src="/socket.io/socket.io.js"></script>
-    <script type="text/javascript" src="js/phaser.min.js"></script>
+		<script src="./js/phaser.js" type="text/javascript"></script>
+		<script src="/eureca.js"></script>
+		<script src="./js/tanks.js" type="text/javascript"></script>
 </head>
 
 <body>
 
 <div class="header">
-	<h1>MMO Submission</h1>
+	<h1>Web Games Project</h1>
 </div>
 
-<div class="topnav">
-	<a href="Index.html">Home</a>
-	<a href="GDD.html">Game Design Document</a>
-	<a href="Game.html">Interstellar Breakout</a>
-	<a class="active" href="About.html">MMOMP</a>
+<ul>
+	<li><a href="Index.html">Home</a></li>
+	<li><a href="GDD.html">Game Design Document</a></li>
+	<li><a href="game.html">Tanks Singleplayer</a></li>
+	<li><a class="active" href="About.html">Tanks Multiplayer</a></li>
+</ul>
+
+<div class="left">
+	<div class="card">
+		<h2>Tanks Singleplayer</h2>
+		<p>This page contains the singleplayer version of the tanks game that was created for the web games project.</p>
+	</div>
+</div>
+	
+<div class="right">
+	<div class="card">
+		<div id="gameElement">
+		</div>
+	</div>
 </div>
 
-<div id="gameDiv"></div>
+<div class="footer">
+	<h2>Web Games Development Project</h2>
+	<h3>University of the West of Scotland</h3>
+</div>
 
 </body>
-<script src="js/game.js" type="text/javascript"></script>
-<script src="js/main.js" type="text/javascript"></script>
-<script src="js/client.js" type="text/javascript"></script>
 </html>
