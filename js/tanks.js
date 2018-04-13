@@ -92,7 +92,7 @@ var eurecaClientSetup = function() {
 }
 
 
-Tank = function (index, game, player, tankType) {
+Tank = function (index, game, player) {
 	this.cursor = {
 		left:false,
 		right:false,
@@ -131,19 +131,6 @@ Tank = function (index, game, player, tankType) {
     this.shadow = game.add.sprite(x, y, 'enemy', 'shadow');
     this.tank = game.add.sprite(x, y, 'enemy', 'tank1');
     this.turret = game.add.sprite(x, y, 'enemy', 'turret');
-	
-	if (tankType == 1){
-		this.tank.tint = 0x0000ff;
-		this.turret.tint = 0x0000ff;
-	}
-	if (tankType == 2){
-		this.tank.tint = 0x008000;
-		this.turret.tint = 0x008000;
-	}
-	if (tankType == 3){
-		this.tank.tint = 0xD2B48C;
-		this.turret.tint = 0xD2B48C;
-	}
 
     this.shadow.anchor.set(0.5);
     this.tank.anchor.set(0.5);
@@ -283,32 +270,17 @@ TankSelect.prototype = {
 	},	
 	create: function(){
 		this.game.add.sprite(0,0,'background');
-		var instructions = this.game.add.text(250,100,'Click to select a colour for your tank!', { font: "20px Arial", fill: "#ffffff", align: "left" });
-		var tank1 = this.game.add.text(250,200,'1: Jagdpanzer (Blue Colour)', { font: "20px Arial", fill: "#ffffff", align: "left" });
-		var tank2 = this.game.add.text(250,300,'2: Panther (Green Colour)', { font: "20px Arial", fill: "#ffffff", align: "left" });
-		var tank3 = this.game.add.text(250,400,'3: Tiger (Tan colour)', { font: "20px Arial", fill: "#ffffff", align: "left" });
+		var instructions = this.game.add.text(250,100,'Click here to play!', { font: "20px Arial", fill: "#ffffff", align: "left" });
+		var tank1 = this.game.add.text(100,200,'Tanks is a competitive player versus player game', { font: "20px Arial", fill: "#ffffff", align: "left" });
+		var tank2 = this.game.add.text(50,300,'Play with your friends and battle to find out who the greatest tank commander is!', { font: "20px Arial", fill: "#ffffff", align: "left" });
+		var tank3 = this.game.add.text(100,400,'Use the arrow keys to move, and the mouse to rotate and fire the turret.', { font: "20px Arial", fill: "#ffffff", align: "left" });
 		
-		tank1.inputEnabled = true;
-		tank2.inputEnabled = true;
-		tank3.inputEnabled = true;
+		instructions.inputEnabled = true;
 		
-		tank1.events.onInputUp.add(startGame1);
-		tank2.events.onInputUp.add(startGame2);
-		tank3.events.onInputUp.add(startGame3);
+		instructions.events.onInputUp.add(startGame1);
 		
 		function startGame1(){
 			game.state.start('Tanks');
-			tankSelect = 1;
-		}
-		
-		function startGame2(){
-			game.state.start('Tanks');
-			tankSelect = 2;
-		}
-		
-		function startGame3(){
-			game.state.start('Tanks');
-			tankSelect = 3;
 		}
 	}
 };

@@ -5,16 +5,18 @@
 	<title>Tanks Singleplayer</title>
 	<link rel="stylesheet" type="text/css" href="WGCSS.css">
 	<style> body { margin: 0; } </style>
-	<script type="text/javascript" src="js/phaser.js"></script>
+		<script type="text/javascript" src="js/phaser.js"></script>
 		<script type="text/javascript" src="js/gameFunc.js"></script>
 		<script type="text/javascript" src="js/mainMenu.js"></script>
 		<script type="text/javascript" src="js/victory.js"></script>
+		<script type="text/javascript" src="js/helpMenu.js"></script>
 		
 		<script>
 			var game = new Phaser.Game(800, 600, Phaser.AUTO, "gameElement");
 			game.state.add("gameFile", gameFunc);
 			game.state.add("victoryScreen", victory);
 			game.state.add("mainMenu", main);
+			game.state.add("helpMenu",help);
 			game.state.start("mainMenu");
 		</script>
 </head>
